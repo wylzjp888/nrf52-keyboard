@@ -117,8 +117,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // USB UART 传输配置
 #define HAS_USB // 启用与CH554的通信支持
-#define UART_RXD 9 // UART_RX口IO 17
-#define UART_TXD 8 // UART_TX口IO 18
+#define UART_RXD 3 // UART_RX口IO 17
+#define UART_TXD 4 // UART_TX口IO 18
 //#define UART_DET 19 // UART 检测引脚，若此脚被拉低，则说明USB正在工作。若不配置则使用RX口作为检测引脚
 #define UART_BAUDRATE NRF_UART_BAUDRATE_115200 // 通信波特率，请不要修改
 
@@ -144,8 +144,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define IS_COMMAND() ( \
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)))
 
-static const uint8_t row_pin_array[MATRIX_ROWS] = {10, 4, 3, 11, 17};
-static const uint8_t column_pin_array[MATRIX_COLS] = {25, 26, 27, 28, 29, 30, 31, 12, 13, 14, 15, 16, 22 };
+static const uint8_t row_pin_array[MATRIX_ROWS] = {10, 9, 8, 11, 17};
+static const uint8_t column_pin_array[MATRIX_COLS] = {25, 26, 27, 28, 29, 30, 31, 12, 13, 14, 15, 16, 22, 5};
 
 #define ROW_IN // 键盘阵列的二极管方向是从COL->ROW
 
@@ -159,8 +159,8 @@ static const uint8_t column_pin_array[MATRIX_COLS] = {25, 26, 27, 28, 29, 30, 31
 // 独立旋钮按键  用于关机后开机
 #define ROTARY_BUTTON 5
 // SSD1306 LCD屏幕
-#define SSD1306_SDA 23
-#define SSD1306_SCL 24
+//#define SSD1306_SDA 23
+//#define SSD1306_SCL 24
 
 /* define if matrix has ghost */
 // #define MATRIX_HAS_GHOST /* 按键阵列是否出现Ghost Key，若没有加二极管则需要启用这个项目 */
