@@ -72,7 +72,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define LED_CAPS 4  //caps led ：5 ； led1、2、3、4：19、20、27、26
 
 // ws2812 RGB 配置
-#define RGB_DI_PIN 1
+#define RGB_DI_PIN 14
 #define RGBLED_NUM 120
 #define DRIVER_LED_TOTAL RGBLED_NUM
 #define RGBLIGHT_ANIMATIONS
@@ -145,7 +145,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)))
 
 static const uint8_t row_pin_array[MATRIX_ROWS] = {10, 9, 8, 11, 17};
-static const uint8_t column_pin_array[MATRIX_COLS] = {25, 26, 27, 28, 29, 30, 31, 12, 13, 23, 15, 16, 22, 5};
+static const uint8_t column_pin_array[MATRIX_COLS] = {25, 26, 27, 28, 29, 30, 31, 12, 13, 1, 15, 16, 22, 5};
 
 #define ROW_IN // 键盘阵列的二极管方向是从COL->ROW
 
